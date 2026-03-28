@@ -1,0 +1,126 @@
+.experience {
+  position: relative;
+}
+
+.title {
+  margin-bottom: 60px;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+/* VERTICAL LINE */
+.line {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ITEM */
+.item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* DOT */
+.dot {
+  position: absolute;
+  left: -2px;
+  top: 10px;
+
+  width: 12px;
+  height: 12px;
+  background: #64748b;
+  border-radius: 50%;
+}
+
+.dot.current {
+  background: #00ffd1;
+  box-shadow: 0 0 10px #00ffd1;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px;
+
+  transition: 0.3s;
+
+  &:hover {
+    border-color: #00ffd1;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0,255,209,0.15);
+  }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* BADGE */
+.badge {
+  background: #00ffd1;
+  color: black;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* META */
+.meta {
+  color: #64748b;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+/* LIST */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* IMPACT METRICS */
+.impact {
+  display: block;
+  color: #00ffd1;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+/* CHIPS */
+.chips {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  span {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+
+    background: rgba(0,255,209,0.1);
+    border: 1px solid rgba(0,255,209,0.3);
+    color: #00ffd1;
+  }
+}

@@ -1,0 +1,50 @@
+.footer {
+  margin-top: 80px;
+  padding: 30px 20px;
+
+  text-align: center;
+
+  /* subtle glass effect */
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* CONTENT */
+.content {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* TEXT */
+p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* NAME HIGHLIGHT */
+.highlight {
+  color: #00ffd1;
+}
+
+/* HEART ANIMATION */
+.heart {
+  display: inline-block;
+  color: #ff4d6d;
+
+  animation: pulse 1.5s infinite;
+}
+
+/* ANIMATION */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* HOVER EFFECT (OPTIONAL) */
+.footer:hover {
+  border-color: #00ffd1;
+}

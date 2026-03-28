@@ -1,0 +1,80 @@
+{
+  "personalInfo": {
+    "name": "Devesh",
+    "surname": "Parmar",
+    "role": "Backend Engineer & Systems Architect",
+    "intro": "// Hello, I'm",
+    "description": "Building scalable, data-intensive microservices with Node.js, Spring Boot, PostgreSQL, and Redis.",
+    "email": "devesh@example.com",
+    "phone": "+91 1234567890",
+    "linkedin": "https://linkedin.com/in/deveshparmar",
+    "github": "https://github.com/deveshparmar",
+    "uptime": "99.7%",
+    "users": "100K+"
+  },
+  "stats": {
+    "leetcode": "700+",
+    "cgpa": "9.80",
+    "experience": "1.8+"
+  },
+  "about": {
+    "sectionNumber": "01.",
+    "title": "About Me",
+    "paragraphs": [
+      "I'm a <span class='highlight'>Backend Engineer</span> with 1.8+ years of experience building scalable, data-intensive microservices. My journey in software development has been driven by a passion for solving complex distributed systems challenges.",
+      "Currently at <span class='highlight-white'>Educational Initiatives</span>, I architect and maintain multi-tenant platforms serving 100K+ monthly active users. I specialize in event-driven architectures, database optimization, and building resilient systems that scale.",
+      "I graduated from <span class='highlight-white'>Pandit Deendayal Energy University</span> with a BTech in Computer Engineering and a CGPA of <span class='highlight'>9.80</span>. Beyond coding, I've led technical communities and published research in NLP-driven drug classification."
+    ],
+    "techStackTitle": "// Technologies I work with:",
+    "techStack": [
+      "Node.js / Express",
+      "PostgreSQL",
+      "Kafka / MQ",
+      "Docker / CI/CD",
+      "Spring Boot",
+      "Redis Cluster",
+      "AWS Services",
+      "TypeScript"
+    ],
+    "cards": [
+      {
+        "type": "education",
+        "title": "Education",
+        "subtitle": "BTech in Computer Engineering",
+        "organization": "Pandit Deendayal Energy University",
+        "date": "Sep 2020 - May 2024 • CGPA: 9.80",
+        "icon": "cap"
+      },
+      {
+        "type": "stats",
+        "items": [
+          {
+            "label": "LeetCode Problems Solved",
+            "value": "700+",
+            "icon": "trophy"
+          },
+          {
+            "label": "Event Participants Led",
+            "value": "300+",
+            "icon": "users"
+          }
+        ]
+      },
+      {
+        "type": "leadership",
+        "title": "Leadership",
+        "subtitle": "Vice President, <span class='highlight'>GFG Student Chapter</span>",
+        "date": "Jun 2022 - Jul 2023",
+        "description": "Led 10+ coding contests and workshops with 300+ participants",
+        "icon": "people"
+      },
+      {
+        "type": "publication",
+        "title": "Publication",
+        "subtitle": "\"Drug Review Classification Using Sentiment Analysis of Drug Reviews\"",
+        "organization": "IEEE WCONF 2023, Raipur",
+        "icon": "file"
+      }
+    ]
+  }
+}

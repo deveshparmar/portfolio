@@ -1,0 +1,216 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* LEFT */
+.left {
+  width: 50%;
+}
+
+.intro {
+  color: #00ffd1;
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin-top: 20px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ICONS */
+.icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+
+  .icon {
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: #00ffd1;
+      color: black;
+    }
+  }
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+
+  h3 {
+    color: #00ffd1;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    color: #64748b;
+  }
+}
+
+/* RIGHT */
+.right {
+  width: 45%;
+  position: relative;
+}
+
+/* CODE CARD */
+.code-card {
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+
+    &.red { background: #ef4444; }
+    &.yellow { background: #facc15; }
+    &.green { background: #22c55e; }
+  }
+
+  .file {
+    margin-left: 10px;
+    color: #94a3b8;
+    font-size: 14px;
+  }
+}
+
+/* CODE */
+pre {
+  margin: 0;
+  padding: 20px;
+  color: #00ffd1;
+  font-family: monospace;
+}
+
+/* BADGES */
+.badge {
+  position: absolute;
+  background: #00ffd1;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+
+  &.top {
+    top: -15px;
+    right: 10px;
+  }
+
+  &.bottom {
+    bottom: -15px;
+    left: 10px;
+  }
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #94a3b8;
+  font-size: 16px;
+
+  text-decoration: none;   // ✅ REMOVE underline
+  outline: none;           // optional
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none; // ✅ ensure no underline on hover
+    color: #00ffd1;
+    border-color: #00ffd1;
+
+    transform: translateY(-3px) scale(1.05);
+
+    box-shadow:
+      0 0 10px rgba(0, 255, 209, 0.3),
+      0 0 20px rgba(0, 255, 209, 0.15);
+
+    background: rgba(0, 255, 209, 0.05);
+  }
+}
+
+/* CODE CARD */
+.code-card {
+  background: #050505;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.file {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* CODE */
+pre {
+  padding: 20px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #e2e8f0;
+  font-family: 'Fira Code', monospace;
+}
+
+/* SYNTAX COLORS */
+.key {
+  color: #c084fc; // purple
+}
+
+.string {
+  color: #34d399; // green
+}
+
+.number {
+  color: #facc15; // yellow
+}

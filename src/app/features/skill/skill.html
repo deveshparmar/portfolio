@@ -1,0 +1,62 @@
+<section class="section container skills">
+
+  <h2 class="title">Skills & Expertise</h2>
+
+  <!-- 🔥 AREAS OF FOCUS (TOP ROW) -->
+  <div class="focus-row">
+    <div class="focus-card" *ngFor="let f of focusAreas">
+      {{f}}
+    </div>
+  </div>
+
+  <!-- 🧱 SKILL DOMAIN CARDS -->
+  <div class="domains">
+    <div class="card" *ngFor="let d of skillDomains">
+
+      <div class="header">
+        <div class="icon">{{d.icon}}</div>
+        <h3>{{d.title}}</h3>
+      </div>
+
+      <div class="chips">
+        <span *ngFor="let s of d.skills">{{s}}</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="certs">
+  <h3 class="sub">Certifications</h3>
+
+  <div class="cert-layout">
+
+    <!-- LEFT COLUMN -->
+    <div class="col">
+      <div class="cert-card" *ngFor="let c of certifications.slice(0,2)">
+        <div class="icon">🎓</div>
+
+        <div>
+          <h4>{{c.title}}</h4>
+          <p>{{c.org}}</p>
+          <span>{{c.date}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col">
+      <div class="cert-card" *ngFor="let c of certifications.slice(2,4)">
+        <div class="icon">📜</div>
+
+        <div>
+          <h4>{{c.title}}</h4>
+          <p>{{c.org}}</p>
+          <span>{{c.date}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>

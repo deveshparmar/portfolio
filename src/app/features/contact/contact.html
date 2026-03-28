@@ -1,0 +1,62 @@
+<section class="section container contact">
+
+  <h2 class="title">Get In Touch</h2>
+
+  <p class="desc">
+    I'm currently open to new opportunities and interesting projects.
+    Whether you have a question about backend systems, want to discuss
+    distributed architectures, or just want to say hi — feel free to reach out!
+  </p>
+
+  <div class="layout">
+
+    <!-- LEFT: FORM -->
+    <div class="form-card">
+
+      <h3>Drop a Message</h3>
+
+      <input type="text" placeholder="Your Name"
+        [(ngModel)]="form.name" />
+
+      <input type="email" placeholder="Your Email"
+        [(ngModel)]="form.email" />
+
+      <textarea rows="5" placeholder="Your Message"
+        [(ngModel)]="form.message"></textarea>
+
+      <button (click)="submit()">Send Message</button>
+
+    </div>
+
+    <!-- RIGHT: SOCIAL CARDS -->
+    <div class="social">
+
+      <a href="https://github.com/deveshparmar" target="_blank" class="social-card">
+        <div class="icon">🐙</div>
+        <div>
+          <h4>GitHub</h4>
+          <p>Check my repositories</p>
+        </div>
+      </a>
+
+      <a href="https://linkedin.com/in/devesh-parmar-875990200/" target="_blank" class="social-card">
+        <div class="icon">🔗</div>
+        <div>
+          <h4>LinkedIn</h4>
+          <p>Connect professionally</p>
+        </div>
+      </a>
+
+      <a href="https://twitter.com/" target="_blank" class="social-card">
+        <div class="icon">🐦</div>
+        <div>
+          <h4>Twitter</h4>
+          <p>Follow updates</p>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

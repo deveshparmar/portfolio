@@ -1,0 +1,33 @@
+<section class="section container projects">
+
+  <h2 class="title">Projects</h2>
+
+  <div class="scroll">
+
+    <div class="card" *ngFor="let p of projects">
+
+      <!-- HEADER -->
+      <div class="top">
+        <div class="icon">{{p.icon}}</div>
+        <span class="duration">{{p.duration}}</span>
+      </div>
+
+      <h3>{{p.title}}</h3>
+
+      <p class="desc">{{p.desc}}</p>
+
+      <!-- HIGHLIGHTS -->
+      <ul>
+        <li *ngFor="let h of p.highlights">▹ {{h}}</li>
+      </ul>
+
+      <!-- TECH -->
+      <div class="chips">
+        <span *ngFor="let t of p.tech">{{t}}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

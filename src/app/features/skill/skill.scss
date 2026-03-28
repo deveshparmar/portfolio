@@ -1,0 +1,169 @@
+/* ===== FOCUS ROW ===== */
+.focus-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+/* FOCUS CARD */
+.focus-card {
+  padding: 10px 16px;
+  border-radius: 20px;
+
+  background: rgba(0,255,209,0.08);
+  border: 1px solid rgba(0,255,209,0.25);
+
+  color: #00ffd1;
+  font-size: 13px;
+  white-space: nowrap;
+
+  transition: 0.25s;
+
+  &:hover {
+    background: #00ffd1;
+    color: black;
+    transform: translateY(-2px);
+  }
+}
+
+/* ===== SKILL DOMAIN GRID ===== */
+.domains {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 18px;
+
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: #00ffd1;
+    box-shadow: 0 0 25px rgba(0,255,209,0.15);
+  }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* ICON */
+.icon {
+  background: rgba(0,255,209,0.1);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* CHIPS */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  span {
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+
+    background: rgba(0,255,209,0.1);
+    border: 1px solid rgba(0,255,209,0.3);
+    color: #00ffd1;
+  }
+}
+
+@media (max-width: 900px) {
+  .domains {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-row {
+    justify-content: center;
+  }
+}
+
+
+/* ===== CERT SECTION ===== */
+.certs {
+  margin-top: 60px;
+}
+
+.sub {
+  margin-bottom: 25px;
+}
+
+/* LAYOUT */
+.cert-layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* COLUMN */
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.cert-card {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: #00ffd1;
+    box-shadow: 0 0 20px rgba(0,255,209,0.15);
+  }
+}
+
+/* ICON */
+.cert-card .icon {
+  min-width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,255,209,0.1);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* TEXT */
+.cert-card h4 {
+  margin: 0 0 5px;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.cert-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.cert-card span {
+  font-size: 12px;
+  color: #64748b;
+}

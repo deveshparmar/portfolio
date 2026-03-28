@@ -1,0 +1,38 @@
+.hero {
+  text-align: center;
+  padding: 60px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.cta {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &.primary {
+    background: #00ffd1;
+    box-shadow: 0 0 15px #00ffd1;
+  }
+
+  &.secondary {
+    background: transparent;
+    border: 1px solid #7c3aed;
+    color: #7c3aed;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
