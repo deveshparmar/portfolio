@@ -1,0 +1,11 @@
+.bg-blur {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: #00ffd1;
+  filter: blur(200px);
+  opacity: 0.2;
+  top: -100px;
+  left: -100px;
+  z-index: -1;
+}
