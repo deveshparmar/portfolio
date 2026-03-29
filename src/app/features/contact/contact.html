@@ -24,7 +24,9 @@
       <textarea rows="5" placeholder="Your Message"
         [(ngModel)]="form.message"></textarea>
 
-      <button (click)="submit()">Send Message</button>
+      <button (click)="submit()" [disabled]="loading">
+        {{ loading ? 'Sending...' : 'Send Message' }}
+      </button>
 
     </div>
 

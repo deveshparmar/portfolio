@@ -3,7 +3,7 @@
     "name": "Devesh Parmar",
     "role": "Software Engineer",
     "location": "Ahmedabad",
-    "experience": "1.8+",
+    "experience": "2+",
     "company": "Educational Initiatives",
     "resumeUrl": "Resume_DeveshParmar.pdf",
     "education": {
@@ -143,11 +143,12 @@
       "phone": "+918511280104",
       "linkedin": "https://www.linkedin.com/in/devesh-parmar-875990200/",
       "github": "https://github.com/deveshparmar",
-      "leetcode": "https://leetcode.com/u/deveshparmar2003/"
+      "leetcode": "https://leetcode.com/u/deveshparmar2003/",
+      "twitter": "https://x.com/asyncDevesh"
     },
     "codeCard": {
       "experience": {
-        "years": 1.8,
+        "years": 2,
         "focus": ["Distributed Systems", "Microservices", "Data Engineering"]
       },
       "currentlyBuilding": "Scalable multi-tenant platforms"

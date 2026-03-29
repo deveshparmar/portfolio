@@ -73,6 +73,7 @@ export interface PortfolioData {
       linkedin: string;
       github: string;
       leetcode: string;
+      twitter: string;
     };
     codeCard: {
       experience: {
