@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Fade } from "../../shared/fade";
 
 @Component({
   selector: 'app-metrics',
-  imports: [CommonModule, Fade],
+  imports: [CommonModule],
   templateUrl: './metrics.html',
   styleUrl: './metrics.scss',
 })
