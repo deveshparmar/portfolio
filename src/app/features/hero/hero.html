@@ -1,18 +1,22 @@
 <section id="home" class="section container">
-  <div class="hero glass" @fadeUp *ngIf="personalInfo$ | async as info">
+  @if(personalInfo$ | async; as info){
+  <div class="hero glass" @fadeUp >
     <h1>
       Hi, I'm <span class="neon">{{info.name}}</span>
     </h1>
 
     <h2>{{info.role}} | Distributed Systems</h2>
 
-    <p *ngIf="info.experience">
+    @if(info.experience){
+    <p>
       Building scalable microservices with {{info.experience}} years of experience.
     </p>
+    }
 
     <div class="cta">
       <button class="primary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View Projects</button>
       <button class="secondary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact Me</button>
     </div>
   </div>
+  }
 </section>

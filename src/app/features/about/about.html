@@ -1,22 +1,28 @@
-<section class="section container about" *ngIf="aboutData$ | async as about">
+@if(aboutData$ | async; as about){
+<section class="section container about">
 
   <!-- LEFT SIDE -->
   <div class="left">
     <h2 class="title">About Me</h2>
 
-    <p *ngFor="let p of about.description">
+    @for(p of about.description; track $index){
+    <p>
        {{p}}
     </p>
+  }
 
     <h3 class="tech-title">// Technologies I work with</h3>
 
     <div class="tech-list">
-      <div *ngFor="let t of about.tech">▹ {{t}}</div>
+      @for(t of about.tech; track $index){
+        <div>▹ {{t}}</div>
+      }
     </div>
   </div>
 
   <!-- RIGHT SIDE -->
-  <div class="right" *ngIf="personalInfo$ | async as info">
+   @if(personalInfo$ | async; as info){
+  <div class="right" >
 
     <!-- EDUCATION -->
     <div class="card full">
@@ -31,15 +37,18 @@
 
     <!-- STATS -->
     <div class="grid-2">
-      <div class="card" *ngFor="let s of about.stats">
-        <div [class]="s.icon"></div>
-        <h3>{{s.value}}</h3>
-        <p>{{s.label}}</p>
-      </div>
+      @for(s of about.stats; track $index){
+        <div class="card">
+          <div [class]="s.icon"></div>
+          <h3>{{s.value}}</h3>
+          <p>{{s.label}}</p>
+        </div>
+      }
     </div>
 
     <!-- LEADERSHIP -->
-    <div class="card full" *ngIf="about.leadership">
+     @if(about.leadership){
+    <div class="card full" >
       <div class="pi pi-user"></div>
       <div>
         <h3>Leadership</h3>
@@ -48,9 +57,11 @@
         <p class="muted">{{about.leadership.desc}}</p>
       </div>
     </div>
+    }
 
     <!-- PUBLICATION -->
-    <div class="card full" *ngIf="about.publication">
+    @if(about.publication){
+    <div class="card full" >
       <div class="pi pi-file"></div>
       <div>
         <h3>Publication</h3>
@@ -60,7 +71,10 @@
         <p class="muted">{{about.publication.publisher}}</p>
       </div>
     </div>
+    }
 
   </div>
+}
 
 </section>
+}

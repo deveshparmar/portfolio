@@ -1,4 +1,5 @@
-<section class="hero container" *ngIf="homeData$ | async as h">
+@if(homeData$ | async; as h){
+<section class="hero container" >
 
   <!-- LEFT -->
   <div class="left">
@@ -17,29 +18,41 @@
 
     <!-- ICONS -->
     <div class="icons">
-      <a [href]="'mailto:' + h.socials.email" class="icon" *ngIf="h.socials.email">
+      @if(h.socials.email){
+      <a [href]="'mailto:' + h.socials.email" class="icon" >
         <i class="pi pi-envelope"></i>
       </a>
+      }
 
-      <a [href]="'tel:' + h.socials.phone" class="icon" *ngIf="h.socials.phone">
+      @if(h.socials.phone){
+      <a [href]="'tel:' + h.socials.phone" class="icon" >
         <i class="pi pi-phone"></i>
       </a>
+    }
 
-      <a [href]="h.socials.linkedin" target="_blank" class="icon" *ngIf="h.socials.linkedin">
+    @if(h.socials.linkedin){
+      <a [href]="h.socials.linkedin" target="_blank" class="icon" >
         <i class="pi pi-linkedin"></i>
       </a>
+    }
 
-      <a [href]="h.socials.twitter" target="_blank" class="icon" *ngIf="h.socials.twitter">
+    @if(h.socials.twitter){
+      <a [href]="h.socials.twitter" target="_blank" class="icon" >
         <i class="pi pi-twitter"></i>
       </a>
+    }
 
-      <a [href]="h.socials.github" target="_blank" class="icon" *ngIf="h.socials.github">
+    @if(h.socials.github){
+      <a [href]="h.socials.github" target="_blank" class="icon" >
         <i class="pi pi-github"></i>
       </a>
+    }
 
-      <a [href]="h.socials.leetcode" target="_blank" class="icon" *ngIf="h.socials.leetcode">
+    @if(h.socials.leetcode){
+      <a [href]="h.socials.leetcode" target="_blank" class="icon" >
         <i class="pi pi-code"></i>
       </a>
+    }
     </div>
   </div>
 
@@ -61,9 +74,11 @@
   experience: {{ '{' }}
     years: <span class="number">{{h.codeCard.experience.years}}</span>,
     focus: [
-      <span class="string" *ngFor="let f of h.codeCard.experience.focus; let last = last">
-        '{{f}}'{{ !last ? ',' : '' }}
-      </span>
+      @for(f of h.codeCard.experience.focus; track $index){
+        <span class="string">
+          '{{f}}'{{ !$last ? ',' : '' }}
+        </span>
+      }
     ]
   {{ '}' }},
 
@@ -77,3 +92,4 @@
   </div>
 
 </section>
+}

@@ -4,7 +4,8 @@
 
   <div class="scroll">
 
-    <div class="card" *ngFor="let p of projects$ | async">
+    @for(p of projects$ | async;  track $index){
+    <div class="card">
 
       <!-- HEADER -->
       <div class="top">
@@ -18,15 +19,20 @@
 
       <!-- HIGHLIGHTS -->
       <ul>
-        <li *ngFor="let h of p.highlights">▹ {{h}}</li>
+        @for(h of p.highlights; track $index){
+          <li>▹ {{h}}</li>
+        }
       </ul>
 
       <!-- TECH -->
       <div class="chips">
-        <span *ngFor="let t of p.tech">{{t}}</span>
+        @for(t of p.tech; track $index){
+          <span>{{t}}</span>
+        }
       </div>
 
     </div>
+  }
 
   </div>
 

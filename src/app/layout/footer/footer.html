@@ -1,6 +1,6 @@
 <footer class="footer">
-
-  <div class="content" *ngIf="name$ | async as name">
+  @if(name$ | async; as name){
+  <div class="content" >
 
     <p class="built">
       Designed & Built by <span class="highlight">{{name}}</span>
@@ -15,5 +15,6 @@
     </p>
 
   </div>
+  }
 
 </footer>

@@ -8,7 +8,8 @@
     <div class="line"></div>
 
     <!-- ITEMS -->
-    <div class="item" *ngFor="let exp of experiences$ | async; let first = first">
+    @for(exp of experiences$ | async; track $index){
+    <div class="item">
       <div class="dot" [class.current]="exp.isCurrent"></div>
 
       <div class="card">
@@ -17,24 +18,33 @@
             <h3>{{exp.role}}</h3>
             <span class="company">{{exp.company}}</span>
           </div>
-          <span class="badge" *ngIf="exp.isCurrent">Current</span>
+          @if(exp.isCurrent){
+          <span class="badge">Current</span>
+          }
         </div>
 
         <p class="meta">{{exp.duration}} • {{exp.location}}</p>
 
         <ul>
-          <li *ngFor="let high of exp.highlights">
-            {{high.text}}
-            <span class="impact" *ngIf="high.impact">{{high.impact}}</span>
-          </li>
+          @for(high of exp.highlights; track $index){
+            <li>
+              {{high.text}}
+              @if(high.impact){
+              <span class="impact">{{high.impact}}</span>
+              }
+            </li>
+          }
         </ul>
 
         <!-- TECH CHIPS -->
         <div class="chips">
-          <span *ngFor="let tool of exp.tech">{{tool}}</span>
+          @for(tool of exp.tech; track $index){
+            <span>{{tool}}</span>
+          }
         </div>
       </div>
     </div>
+  }
 
   </div>
 </section>

@@ -4,14 +4,17 @@
 
   <!-- 🔥 AREAS OF FOCUS (TOP ROW) -->
   <div class="focus-row">
-    <div class="focus-card" *ngFor="let f of focusAreas$ | async">
+    @for(f of focusAreas$ | async; track $index){
+    <div class="focus-card">
       {{f}}
     </div>
+    }
   </div>
 
   <!-- 🧱 SKILL DOMAIN CARDS -->
   <div class="domains">
-    <div class="card" *ngFor="let d of skillDomains$ | async">
+    @for(d of skillDomains$ | async; track $index){
+    <div class="card">
 
       <div class="header">
         <div class="icon">{{d.icon}}</div>
@@ -19,10 +22,13 @@
       </div>
 
       <div class="chips">
-        <span *ngFor="let s of d.skills">{{s}}</span>
+        @for(s of d.skills; track $index){
+          <span>{{s}}</span>
+        }
       </div>
 
     </div>
+  }
   </div>
 
   <div class="certs">
@@ -30,10 +36,11 @@
 
   <div class="cert-layout">
 
-    <ng-container *ngIf="certifications$ | async as certs">
+    @if(certifications$ | async; as certs){
       <!-- LEFT COLUMN -->
       <div class="col">
-        <div class="cert-card" *ngFor="let c of certs.slice(0, 2)">
+        @for(c of certs.slice(0, 2); track $index){
+        <div class="cert-card">
           <div class="icon">🎓</div>
 
           <div>
@@ -42,11 +49,13 @@
             <span>{{c.date}}</span>
           </div>
         </div>
+      }
       </div>
 
       <!-- RIGHT COLUMN -->
       <div class="col">
-        <div class="cert-card" *ngFor="let c of certs.slice(2, 4)">
+        @for(c of certs.slice(2, 4); track $index){
+        <div class="cert-card">
           <div class="icon">📜</div>
 
           <div>
@@ -55,8 +64,9 @@
             <span>{{c.date}}</span>
           </div>
         </div>
+      }
       </div>
-    </ng-container>
+    }
 
   </div>
 </div>

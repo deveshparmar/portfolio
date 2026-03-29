@@ -21,7 +21,6 @@ export class Contact {
   loading = false;
 
   submit() {
-    // 🛡️ BASIC VALIDATION
     if (!this.form.name.trim() || !this.form.email.trim() || !this.form.message.trim()) {
       alert('Please fill in all mandatory fields: Name, Email, and Message.');
       return;

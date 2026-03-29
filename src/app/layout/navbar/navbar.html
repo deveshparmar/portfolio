@@ -1,6 +1,6 @@
 <nav [class.scrolled]="scrolled">
-
-  <div class="nav-container" *ngIf="personalInfo$ | async as info">
+  @if(personalInfo$ | async; as info){
+  <div class="nav-container" >
 
     <div class="logo neon">{{info.name}}.dev</div>
 
@@ -13,11 +13,14 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <a [href]="info.resumeUrl" target="_blank" class="resume-btn" *ngIf="info.resumeUrl">
+      @if(info.resumeUrl){
+      <a [href]="info.resumeUrl" target="_blank" class="resume-btn" >
       Resume
       </a>
+      }
     </div>
 
   </div>
+}
 
 </nav>
