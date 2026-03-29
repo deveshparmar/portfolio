@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -34,9 +35,9 @@ export class Contact {
 
     this.loading = true;
 
-    const serviceID = 'service_rxjn2z8';
-    const templateID = 'template_phzjprf';
-    const publicKey = 's4_61gVeL98FkqiCR';
+    const serviceID = environment.emailjs.serviceId;
+    const templateID = environment.emailjs.templateId;
+    const publicKey = environment.emailjs.publicKey;
 
     emailjs.send(serviceID, templateID, {
       from_name: this.form.name,
