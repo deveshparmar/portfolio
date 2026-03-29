@@ -4,7 +4,7 @@
 
   <div class="scroll">
 
-    <div class="card" *ngFor="let p of projects">
+    <div class="card" *ngFor="let p of projects$ | async">
 
       <!-- HEADER -->
       <div class="top">

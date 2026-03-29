@@ -1,88 +1,23 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../core/services/portfolio.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-skill',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './skill.html',
   styleUrl: './skill.scss',
 })
 export class Skill {
-  focusAreas = [
-    'Backend Engineering',
-    'Distributed Systems',
-    'Data-Intensive Applications',
-    'System Design',
-    'Database Optimization'
-  ];
+  private portfolioService = inject(PortfolioService);
+  
+  skillsData$ = this.portfolioService.getPortfolioData().pipe(
+    map(data => data.skills)
+  );
 
-  skillDomains = [
-    {
-      title: 'Languages',
-      icon: '💻',
-      skills: ['Java', 'JavaScript', 'TypeScript', 'Python']
-    },
-    {
-      title: 'Backend & Distributed Systems',
-      icon: '⚙️',
-      skills: [
-        'Node.js', 'Express.js', 'Spring Boot',
-        'Microservices', 'REST APIs', 'Kafka',
-        'Message Queues', 'Event-Driven'
-      ]
-    },
-    {
-      title: 'Data & Databases',
-      icon: '🗄️',
-      skills: [
-        'PostgreSQL', 'Query Optimization', 'Indexing',
-        'Partitioning', 'CTEs', 'Redis',
-        'Caching', 'Pub/Sub', 'MongoDB', 'MySQL'
-      ]
-    },
-    {
-      title: 'Frontend',
-      icon: '🎨',
-      skills: ['Angular', 'HTML', 'CSS']
-    },
-    {
-      title: 'Cloud & DevOps',
-      icon: '☁️',
-      skills: [
-        'AWS EC2', 'S3', 'RDS', 'CloudWatch',
-        'Docker', 'CI/CD', 'Load Balancing', 'Nginx'
-      ]
-    },
-    {
-      title: 'Tools',
-      icon: '🛠️',
-      skills: [
-        'Git', 'GitHub', 'Postman',
-        'VS Code', 'IntelliJ', 'Linux'
-      ]
-    }
-  ];
-
-  certifications = [
-    {
-      title: 'Azure Fundamentals (AZ-900)',
-      org: 'Microsoft',
-      date: 'Mar 2023'
-    },
-    {
-      title: 'Power Platform Fundamentals (PL-900)',
-      org: 'Microsoft',
-      date: 'Mar 2023'
-    },
-    {
-      title: 'Neural Networks & Deep Learning',
-      org: 'Coursera',
-      date: 'Jan 2023'
-    },
-    {
-      title: 'ML to DL: Remote Sensing',
-      org: 'ISRO',
-      date: 'Jul 2022'
-    }
-  ];
+  focusAreas$ = this.skillsData$.pipe(map(s => s.focusAreas));
+  skillDomains$ = this.skillsData$.pipe(map(s => s.domains));
+  certifications$ = this.skillsData$.pipe(map(s => s.certifications));
 }

@@ -1,19 +1,18 @@
 <section id="home" class="section container">
-  <div class="hero glass" @fadeUp>
+  <div class="hero glass" @fadeUp *ngIf="personalInfo$ | async as info">
     <h1>
-      Hi, I'm <span class="neon">Devesh Parmar</span>
+      Hi, I'm <span class="neon">{{info.name}}</span>
     </h1>
 
-    <h2>Backend Engineer | Distributed Systems</h2>
+    <h2>{{info.role}} | Distributed Systems</h2>
 
-    <p>
-      Building scalable microservices handling 15K+ req/min,
-      optimized PostgreSQL & Redis systems.
+    <p *ngIf="info.experience">
+      Building scalable microservices with {{info.experience}} years of experience.
     </p>
 
     <div class="cta">
-      <button class="primary">View Projects</button>
-      <button class="secondary">Contact Me</button>
+      <button class="primary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">View Projects</button>
+      <button class="secondary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact Me</button>
     </div>
   </div>
 </section>

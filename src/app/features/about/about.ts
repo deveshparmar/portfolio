@@ -1,9 +1,23 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../core/services/portfolio.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About {}
+export class About {
+  private portfolioService = inject(PortfolioService);
+  
+  aboutData$ = this.portfolioService.getPortfolioData().pipe(
+    map(data => data.about)
+  );
+  
+  personalInfo$ = this.portfolioService.getPortfolioData().pipe(
+    map(data => data.personalInfo)
+  );
+}

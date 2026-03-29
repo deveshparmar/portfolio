@@ -1,9 +1,13 @@
 import { trigger, transition, style, animate } from '@angular/animations';
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../core/services/portfolio.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
   animations: [
@@ -16,4 +20,9 @@ import { Component } from '@angular/core';
     ])
     ]
 })
-export class Hero {}
+export class Hero {
+  private portfolioService = inject(PortfolioService);
+  personalInfo$ = this.portfolioService.getPortfolioData().pipe(
+    map(data => data.personalInfo)
+  );
+}

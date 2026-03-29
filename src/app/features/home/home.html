@@ -1,43 +1,39 @@
-<section class="hero container">
+<section class="hero container" *ngIf="homeData$ | async as h">
 
   <!-- LEFT -->
   <div class="left">
-    <p class="intro">// Hello, I'm</p>
+    <p class="intro">{{h.intro}}</p>
 
     <h1>
-      Devesh <br />
-      <span class="highlight">Parmar</span>
+      {{h.name}} <br />
+      <span class="highlight">{{h.surname}}</span>
     </h1>
 
-    <h2>Backend Engineer &amp; Systems Architect</h2>
+    <h2>{{h.role}}</h2>
 
     <p class="desc">
-      Building scalable, data-intensive microservices with
-      <span class="highlight">Node.js</span>,
-      <span class="highlight">Spring Boot</span>,
-      <span class="highlight">PostgreSQL</span>, and
-      <span class="highlight">Redis</span>.
+      {{h.desc}}
     </p>
 
     <!-- ICONS -->
     <div class="icons">
-      <a href="mailto:deveshparmar2003&#64;gmail.com" class="icon">
+      <a [href]="'mailto:' + h.socials.email" class="icon" *ngIf="h.socials.email">
         <i class="pi pi-envelope"></i>
       </a>
 
-      <a href="tel:+918511280104" class="icon">
+      <a [href]="'tel:' + h.socials.phone" class="icon" *ngIf="h.socials.phone">
         <i class="pi pi-phone"></i>
       </a>
 
-      <a href="https://www.linkedin.com/in/devesh-parmar-875990200/" target="_blank" class="icon">
+      <a [href]="h.socials.linkedin" target="_blank" class="icon" *ngIf="h.socials.linkedin">
         <i class="pi pi-linkedin"></i>
       </a>
 
-      <a href="https://github.com/deveshparmar" target="_blank" class="icon">
+      <a [href]="h.socials.github" target="_blank" class="icon" *ngIf="h.socials.github">
         <i class="pi pi-github"></i>
       </a>
 
-      <a href="https://leetcode.com/u/deveshparmar2003/" target="_blank" class="icon">
+      <a [href]="h.socials.leetcode" target="_blank" class="icon" *ngIf="h.socials.leetcode">
         <i class="pi pi-code"></i>
       </a>
     </div>
@@ -55,19 +51,19 @@
 
       <pre>
 <span class="key">const</span> developer = {{ '{' }}
-  name: <span class="string">'Devesh Parmar'</span>,
-  role: <span class="string">'Backend Engineer'</span>,
+  name: <span class="string">'{{h.name}} {{h.surname}}'</span>,
+  role: <span class="string">'{{h.role}}'</span>,
 
   experience: {{ '{' }}
-    years: <span class="number">1.8</span>,
+    years: <span class="number">{{h.codeCard.experience.years}}</span>,
     focus: [
-      <span class="string">'Distributed Systems'</span>,
-      <span class="string">'Microservices'</span>,
-      <span class="string">'Data Engineering'</span>
+      <span class="string" *ngFor="let f of h.codeCard.experience.focus; let last = last">
+        '{{f}}'{{ !last ? ',' : '' }}
+      </span>
     ]
   {{ '}' }},
 
-  currentlyBuilding: <span class="string">'Scalable multi-tenant platforms'</span>
+  currentlyBuilding: <span class="string">'{{h.codeCard.currentlyBuilding}}'</span>
 {{ '}' }};
       </pre>
     </div>

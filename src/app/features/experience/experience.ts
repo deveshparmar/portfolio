@@ -1,9 +1,12 @@
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../core/services/portfolio.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-experience',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './experience.html',
   styleUrl: './experience.scss',
@@ -16,22 +19,14 @@ import { Component } from '@angular/core';
             animate('500ms ease-out',
               style({ opacity: 1, transform: 'translateY(0)' }))
           ])
-        ])
+        ], { optional: true })
       ])
     ])
   ]
 })
 export class Experience {
-  experiences = [
-    {
-      company: 'Educational Initiatives',
-      role: 'Software Development Engineer',
-      highlights: [
-        'Built multi-tenant microservices platform (99.7% uptime)',
-        'Handled 15K+ req/min using Redis cluster',
-        'Optimized queries from 800ms → 120ms',
-        'Reduced DB load by 65%'
-      ]
-    }
-  ];
+  private portfolioService = inject(PortfolioService);
+  experiences$ = this.portfolioService.getPortfolioData().pipe(
+    map(data => data.experience)
+  );
 }

@@ -4,14 +4,14 @@
 
   <!-- 🔥 AREAS OF FOCUS (TOP ROW) -->
   <div class="focus-row">
-    <div class="focus-card" *ngFor="let f of focusAreas">
+    <div class="focus-card" *ngFor="let f of focusAreas$ | async">
       {{f}}
     </div>
   </div>
 
   <!-- 🧱 SKILL DOMAIN CARDS -->
   <div class="domains">
-    <div class="card" *ngFor="let d of skillDomains">
+    <div class="card" *ngFor="let d of skillDomains$ | async">
 
       <div class="header">
         <div class="icon">{{d.icon}}</div>
@@ -30,31 +30,33 @@
 
   <div class="cert-layout">
 
-    <!-- LEFT COLUMN -->
-    <div class="col">
-      <div class="cert-card" *ngFor="let c of certifications.slice(0,2)">
-        <div class="icon">🎓</div>
+    <ng-container *ngIf="certifications$ | async as certs">
+      <!-- LEFT COLUMN -->
+      <div class="col">
+        <div class="cert-card" *ngFor="let c of certs.slice(0, 2)">
+          <div class="icon">🎓</div>
 
-        <div>
-          <h4>{{c.title}}</h4>
-          <p>{{c.org}}</p>
-          <span>{{c.date}}</span>
+          <div>
+            <h4>{{c.title}}</h4>
+            <p>{{c.org}}</p>
+            <span>{{c.date}}</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="col">
-      <div class="cert-card" *ngFor="let c of certifications.slice(2,4)">
-        <div class="icon">📜</div>
+      <!-- RIGHT COLUMN -->
+      <div class="col">
+        <div class="cert-card" *ngFor="let c of certs.slice(2, 4)">
+          <div class="icon">📜</div>
 
-        <div>
-          <h4>{{c.title}}</h4>
-          <p>{{c.org}}</p>
-          <span>{{c.date}}</span>
+          <div>
+            <h4>{{c.title}}</h4>
+            <p>{{c.org}}</p>
+            <span>{{c.date}}</span>
+          </div>
         </div>
       </div>
-    </div>
+    </ng-container>
 
   </div>
 </div>

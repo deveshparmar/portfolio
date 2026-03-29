@@ -1,0 +1,156 @@
+{
+  "personalInfo": {
+    "name": "Devesh Parmar",
+    "role": "Software Engineer",
+    "location": "Ahmedabad",
+    "experience": "1.8+",
+    "company": "Educational Initiatives",
+    "resumeUrl": "Resume_DeveshParmar.pdf",
+    "education": {
+      "degree": "BTech in Computer Engineering",
+      "school": "Pandit Deendayal Energy University",
+      "duration": "Sep 2020 - May 2024",
+      "cgpa": "9.80"
+    }
+  },
+  "about": {
+    "description": [
+      "I'm a Software Engineer with 2+ years of experience building scalable, data-intensive microservices. My journey in software development has been driven by a passion for solving complex distributed systems challenges.",
+      "Currently at Educational Initiatives, I architect and maintain multi-tenant platforms serving 100K+ monthly users. I specialize in event-driven architectures, database optimization, and resilient systems.",
+      "I graduated from Pandit Deendayal Energy University with a CGPA of 9.80. Beyond coding, I’ve led technical communities and published research in NLP."
+    ],
+    "tech": [
+      "Node.js / Express",
+      "Spring Boot",
+      "PostgreSQL",
+      "Redis Cluster",
+      "Kafka / MQ",
+      "AWS Services",
+      "Docker / CI/CD",
+      "TypeScript"
+    ],
+    "stats": [
+      { "label": "LeetCode Problems Solved", "value": "700+", "icon": "pi pi-trophy" },
+      { "label": "Event Participants Led", "value": "300+", "icon": "pi pi-users" }
+    ],
+    "leadership": {
+      "role": "Vice President, GFG Student Chapter",
+      "duration": "Jun 2022 – Jul 2023",
+      "desc": "Led 10+ coding contests with 300+ participants"
+    },
+    "publication": {
+      "title": "Drug Review Classification Using Sentiment Analysis of Drug Reviews",
+      "publisher": "IEEE WCONF 2023, Raipur"
+    }
+  },
+  "experience": [
+    {
+      "role": "Software Developer",
+      "company": "Educational Initiatives",
+      "duration": "Jan 2024 – Present",
+      "location": "Ahmedabad",
+      "isCurrent": true,
+      "highlights": [
+        { "text": "Architected multi-tenant platform using event-driven microservices", "impact": "100K+ users • 99.7% uptime" },
+        { "text": "Designed Content Microservice with PostgreSQL recursive CTEs", "impact": "O(n²) → O(log n) • <150ms latency" },
+        { "text": "Built Redis Cluster cache service", "impact": "15K req/min • 99.8% hit rate" },
+        { "text": "Optimized DB queries and indexing", "impact": "800ms → 120ms (85% faster)" },
+        { "text": "Zero-downtime migration using dual-write pattern", "impact": "10K+ items • <0.01% loss" }
+      ],
+      "tech": ["Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Angular"]
+    },
+    {
+      "role": "Software Engineering Intern",
+      "company": "Capgemini",
+      "duration": "Jun 2023 – Jul 2023",
+      "location": "Gandhinagar",
+      "isCurrent": false,
+      "highlights": [
+        { "text": "Built healthcare workflow solution using ABHA sandbox" },
+        { "text": "Developed LIMS modules with digital health records" },
+        { "text": "Designed REST APIs for interoperability" }
+      ],
+      "tech": ["MongoDB", "Express", "React", "Node.js", "REST APIs"]
+    }
+  ],
+  "skills": {
+    "focusAreas": [
+      "Backend Engineering",
+      "Distributed Systems",
+      "Data-Intensive Applications",
+      "System Design",
+      "Database Optimization",
+      "Microservices",
+      "Frontend Engineering"
+    ],
+    "domains": [
+      { "title": "Languages", "icon": "💻", "skills": ["Java", "JavaScript", "TypeScript", "Python"] },
+      { "title": "Backend & Distributed Systems", "icon": "⚙️", "skills": ["Node.js", "Express.js", "Spring Boot", "Microservices", "REST APIs", "Kafka", "Message Queues", "Event-Driven"] },
+      { "title": "Data & Databases", "icon": "🗄️", "skills": ["PostgreSQL", "Query Optimization", "Indexing", "Partitioning", "CTEs", "Redis", "Caching", "Pub/Sub", "MongoDB", "MySQL"] },
+      { "title": "Frontend", "icon": "🎨", "skills": ["Angular", "HTML", "CSS"] },
+      { "title": "Cloud & DevOps", "icon": "☁️", "skills": ["AWS EC2", "S3", "RDS", "CloudWatch", "Docker", "CI/CD", "Load Balancing", "Nginx"] },
+      { "title": "Tools", "icon": "🛠️", "skills": ["Git", "GitHub", "Postman", "VS Code", "IntelliJ", "Linux"] }
+    ],
+    "certifications": [
+      { "title": "Azure Fundamentals (AZ-900)", "org": "Microsoft", "date": "Mar 2023" },
+      { "title": "Power Platform Fundamentals (PL-900)", "org": "Microsoft", "date": "Mar 2023" },
+      { "title": "Neural Networks & Deep Learning", "org": "Coursera", "date": "Jan 2023" },
+      { "title": "ML to DL: Remote Sensing", "org": "ISRO", "date": "Jul 2022" }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Common Authoring Platform",
+      "icon": "🚀",
+      "duration": "2024 – Present",
+      "desc": "Multi-tenant platform with event-driven microservices and real-time collaboration.",
+      "highlights": ["100K+ monthly active users", "99.7% uptime", "15K+ requests/min cache throughput"],
+      "tech": ["Node.js", "TypeScript", "PostgreSQL", "Redis", "Angular", "AWS"]
+    },
+    {
+      "title": "Distributed Job Processing System",
+      "icon": "⚙️",
+      "duration": "Feb–Mar 2026",
+      "desc": "Fault-tolerant distributed job scheduler with Kafka and retry mechanisms.",
+      "highlights": ["At-least-once delivery", "DLQ + retry system", "Idempotent processing", "100+ concurrent jobs tested"],
+      "tech": ["Node.js", "Kafka", "PostgreSQL", "Redis"]
+    },
+    {
+      "title": "Digital Watermarking using QR",
+      "icon": "🔐",
+      "duration": "Aug–Nov 2023",
+      "desc": "Secure image watermarking using QR embedding with encryption.",
+      "highlights": ["LSB, DCT, DWT algorithms", "RSA & AES encryption", "QR-based embedding"],
+      "tech": ["Python", "Image Processing", "Security"]
+    },
+    {
+      "title": "Drug Quality Classification",
+      "icon": "🧠",
+      "duration": "Nov–Dec 2022",
+      "desc": "NLP-based system for predicting drug quality using sentiment analysis.",
+      "highlights": ["NLP sentiment analysis", "Multiple ML models", "Published at IEEE WCONF 2023"],
+      "tech": ["Python", "NLP", "Machine Learning", "Streamlit"]
+    }
+  ],
+  "home": {
+    "intro": "// Hello, I'm",
+    "name": "Devesh",
+    "surname": "Parmar",
+    "role": "Software Engineer & Systems Architect",
+    "desc": "Building scalable, data-intensive microservices with Node.js, Spring Boot, PostgreSQL, and Redis.",
+    "socials": {
+      "email": "deveshparmar2003@gmail.com",
+      "phone": "+918511280104",
+      "linkedin": "https://www.linkedin.com/in/devesh-parmar-875990200/",
+      "github": "https://github.com/deveshparmar",
+      "leetcode": "https://leetcode.com/u/deveshparmar2003/"
+    },
+    "codeCard": {
+      "experience": {
+        "years": 1.8,
+        "focus": ["Distributed Systems", "Microservices", "Data Engineering"]
+      },
+      "currentlyBuilding": "Scalable multi-tenant platforms"
+    }
+  }
+}
