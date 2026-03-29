@@ -16,6 +16,7 @@ export interface PortfolioData {
       duration: string;
       cgpa: string;
     };
+    website: string;
   };
   about: {
     description: string[];
@@ -74,6 +75,7 @@ export interface PortfolioData {
       github: string;
       leetcode: string;
       twitter: string;
+      blog:string;
     };
     codeCard: {
       experience: {

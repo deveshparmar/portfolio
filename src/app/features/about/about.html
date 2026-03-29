@@ -26,7 +26,7 @@
 
     <!-- EDUCATION -->
     <div class="card full">
-      <div class="pi pi-graduation-cap"></div>
+      <div class="icon pi pi-graduation-cap"></div>
       <div>
         <h3>Education</h3>
         <p>{{info.education.degree}}</p>
@@ -35,13 +35,14 @@
       </div>
     </div>
 
-    <!-- STATS -->
     <div class="grid-2">
       @for(s of about.stats; track $index){
-        <div class="card">
-          <div [class]="s.icon"></div>
-          <h3>{{s.value}}</h3>
-          <p>{{s.label}}</p>
+        <div class="card stat-card">
+          <div [class]="'icon ' + s.icon"></div>
+          <div>
+            <h3>{{s.value}}</h3>
+            <p>{{s.label}}</p>
+          </div>
         </div>
       }
     </div>
@@ -49,7 +50,7 @@
     <!-- LEADERSHIP -->
      @if(about.leadership){
     <div class="card full" >
-      <div class="pi pi-user"></div>
+      <div class="icon pi pi-user"></div>
       <div>
         <h3>Leadership</h3>
         <p>{{about.leadership.role}}</p>
@@ -62,7 +63,7 @@
     <!-- PUBLICATION -->
     @if(about.publication){
     <div class="card full" >
-      <div class="pi pi-file"></div>
+      <div class="icon pi pi-file"></div>
       <div>
         <h3>Publication</h3>
         <p>

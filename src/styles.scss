@@ -7,6 +7,10 @@ $primary: #00ffd1;
 $text: #94a3b8;
 $white: #e2e8f0;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== BASE ===== */
 body {
   margin: 0;

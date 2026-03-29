@@ -52,6 +52,7 @@
   padding: 18px;
 
   display: flex;
+  align-items: center;
   gap: 15px;
 
   transition: 0.3s;
@@ -60,6 +61,18 @@
     border-color: #00ffd1;
     transform: translateY(-4px);
     box-shadow: 0 0 20px rgba(0,255,209,0.15);
+  }
+}
+
+.stat-card {
+  h3 {
+    color: #00ffd1;
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 0;
   }
 }
 

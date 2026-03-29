@@ -11,7 +11,8 @@
       "school": "Pandit Deendayal Energy University",
       "duration": "Sep 2020 - May 2024",
       "cgpa": "9.80"
-    }
+    },
+    "website": "devesh-parmar.cloud"
   },
   "about": {
     "description": [
@@ -84,12 +85,12 @@
       "Frontend Engineering"
     ],
     "domains": [
-      { "title": "Languages", "icon": "💻", "skills": ["Java", "JavaScript", "TypeScript", "Python"] },
-      { "title": "Backend & Distributed Systems", "icon": "⚙️", "skills": ["Node.js", "Express.js", "Spring Boot", "Microservices", "REST APIs", "Kafka", "Message Queues", "Event-Driven"] },
-      { "title": "Data & Databases", "icon": "🗄️", "skills": ["PostgreSQL", "Query Optimization", "Indexing", "Partitioning", "CTEs", "Redis", "Caching", "Pub/Sub", "MongoDB", "MySQL"] },
-      { "title": "Frontend", "icon": "🎨", "skills": ["Angular", "HTML", "CSS"] },
-      { "title": "Cloud & DevOps", "icon": "☁️", "skills": ["AWS EC2", "S3", "RDS", "CloudWatch", "Docker", "CI/CD", "Load Balancing", "Nginx"] },
-      { "title": "Tools", "icon": "🛠️", "skills": ["Git", "GitHub", "Postman", "VS Code", "IntelliJ", "Linux"] }
+      { "title": "Languages", "icon": "pi pi-language", "skills": ["Java", "JavaScript", "TypeScript", "Python"] },
+      { "title": "Backend & Distributed Systems", "icon": "pi pi-cog", "skills": ["Node.js", "Express.js", "Spring Boot", "Microservices", "REST APIs", "Kafka", "Message Queues", "Event-Driven"] },
+      { "title": "Data & Databases", "icon": "pi pi-database", "skills": ["PostgreSQL", "Query Optimization", "Indexing", "Partitioning", "CTEs", "Redis", "Caching", "Pub/Sub", "MongoDB", "MySQL"] },
+      { "title": "Frontend", "icon": "pi pi-palette", "skills": ["Angular", "HTML", "CSS"] },
+      { "title": "Cloud & DevOps", "icon": "pi pi-cloud", "skills": ["AWS EC2", "S3", "RDS", "CloudWatch", "Docker", "CI/CD", "Load Balancing", "Nginx"] },
+      { "title": "Tools", "icon": "pi pi-wrench", "skills": ["Git", "GitHub", "Postman", "VS Code", "IntelliJ", "Linux"] }
     ],
     "certifications": [
       { "title": "Azure Fundamentals (AZ-900)", "org": "Microsoft", "date": "Mar 2023" },
@@ -100,16 +101,8 @@
   },
   "projects": [
     {
-      "title": "Common Authoring Platform",
-      "icon": "🚀",
-      "duration": "2024 – Present",
-      "desc": "Multi-tenant platform with event-driven microservices and real-time collaboration.",
-      "highlights": ["100K+ monthly active users", "99.7% uptime", "15K+ requests/min cache throughput"],
-      "tech": ["Node.js", "TypeScript", "PostgreSQL", "Redis", "Angular", "AWS"]
-    },
-    {
       "title": "Distributed Job Processing System",
-      "icon": "⚙️",
+      "icon": "pi pi-cog",
       "duration": "Feb–Mar 2026",
       "desc": "Fault-tolerant distributed job scheduler with Kafka and retry mechanisms.",
       "highlights": ["At-least-once delivery", "DLQ + retry system", "Idempotent processing", "100+ concurrent jobs tested"],
@@ -117,7 +110,7 @@
     },
     {
       "title": "Digital Watermarking using QR",
-      "icon": "🔐",
+      "icon": "pi pi-lock",
       "duration": "Aug–Nov 2023",
       "desc": "Secure image watermarking using QR embedding with encryption.",
       "highlights": ["LSB, DCT, DWT algorithms", "RSA & AES encryption", "QR-based embedding"],
@@ -125,7 +118,7 @@
     },
     {
       "title": "Drug Quality Classification",
-      "icon": "🧠",
+      "icon": "pi pi-chart-scatter",
       "duration": "Nov–Dec 2022",
       "desc": "NLP-based system for predicting drug quality using sentiment analysis.",
       "highlights": ["NLP sentiment analysis", "Multiple ML models", "Published at IEEE WCONF 2023"],
@@ -144,7 +137,8 @@
       "linkedin": "https://www.linkedin.com/in/devesh-parmar-875990200/",
       "github": "https://github.com/deveshparmar",
       "leetcode": "https://leetcode.com/u/deveshparmar2003/",
-      "twitter": "https://x.com/asyncDevesh"
+      "twitter": "https://x.com/asyncDevesh",
+      "blog": "https://backend-bytes.hashnode.dev/"
     },
     "codeCard": {
       "experience": {
