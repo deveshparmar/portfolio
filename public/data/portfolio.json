@@ -146,7 +146,7 @@
     "codeCard": {
       "experience": {
         "years": 2,
-        "focus": ["Distributed Systems", "Microservices", "System Design", "Performance Optimization"]
+        "focus": ["Distributed Systems", "Microservices", "System Design"]
       },
       "currentlyBuilding": "Unified microservices-based content platform (CAP)"
     }
