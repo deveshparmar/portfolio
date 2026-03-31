@@ -17,7 +17,7 @@
   "about": {
     "description": [
       "I'm a Software Engineer with 2+ years of experience building scalable, distributed microservices in edtech. My work is driven by a passion for system design, performance optimization, and solving complex architectural challenges.",
-      "At Educational Initiatives, I led the migration from fragmented per-product monolithic content systems to a unified microservices-based platform — the Common Authoring Platform (CAP) — now serving 4 products and 50K+ content items. I own the Core Content Microservice end-to-end, from design to delivery.",
+      "At Educational Initiatives, I led the migration from fragmented per-product monolithic content systems to a unified microservices-based platform - the Common Authoring Platform (CAP) - now serving 4 products and 50K+ content items. I own the Core Content Microservice end-to-end, from design to delivery.",
       "I graduated from Pandit Deendayal Energy University with a CGPA of 9.80. Beyond coding, I've led technical communities and published research in NLP."
     ],
     "tech": [
@@ -146,7 +146,7 @@
     "codeCard": {
       "experience": {
         "years": 2,
-        "focus": ["Distributed Systems", "Microservices", "System Design", "Performance Optimization"]
+        "focus": ["Distributed Systems", "Microservices", "System Design"]
       },
       "currentlyBuilding": "Unified microservices-based content platform (CAP)"
     }
