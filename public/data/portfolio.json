@@ -16,9 +16,9 @@
   },
   "about": {
     "description": [
-      "I'm a Software Engineer with 2+ years of experience building scalable, data-intensive microservices. My journey in software development has been driven by a passion for solving complex distributed systems challenges.",
-      "Currently at Educational Initiatives, I architect and maintain multi-tenant platforms serving 100K+ monthly users. I specialize in event-driven architectures, database optimization, and resilient systems.",
-      "I graduated from Pandit Deendayal Energy University with a CGPA of 9.80. Beyond coding, I’ve led technical communities and published research in NLP."
+      "I'm a Software Engineer with 2+ years of experience building scalable, distributed microservices in edtech. My work is driven by a passion for system design, performance optimization, and solving complex architectural challenges.",
+      "At Educational Initiatives, I led the migration from fragmented per-product monolithic content systems to a unified microservices-based platform — the Common Authoring Platform (CAP) — now serving 4 products and 50K+ content items. I own the Core Content Microservice end-to-end, from design to delivery.",
+      "I graduated from Pandit Deendayal Energy University with a CGPA of 9.80. Beyond coding, I've led technical communities and published research in NLP."
     ],
     "tech": [
       "Node.js / Express",
@@ -46,19 +46,22 @@
   },
   "experience": [
     {
-      "role": "Software Developer",
+      "role": "Software Development Engineer",
       "company": "Educational Initiatives",
       "duration": "Jan 2024 – Present",
       "location": "Ahmedabad",
       "isCurrent": true,
       "highlights": [
-        { "text": "Architected multi-tenant platform using event-driven microservices", "impact": "100K+ users • 99.7% uptime" },
-        { "text": "Designed Content Microservice with PostgreSQL recursive CTEs", "impact": "O(n²) → O(log n) • <150ms latency" },
-        { "text": "Built Redis Cluster cache service", "impact": "15K req/min • 99.8% hit rate" },
-        { "text": "Optimized DB queries and indexing", "impact": "800ms → 120ms (85% faster)" },
-        { "text": "Zero-downtime migration using dual-write pattern", "impact": "10K+ items • <0.01% loss" }
+        { "text": "Led migration from per-product monolithic content systems to unified microservices architecture", "impact": "4 products • 50K+ content items" },
+        { "text": "Designed and owned Core Content Microservice — full content lifecycle, container assembly, adaptive learning logic", "impact": "CAP serving ASSET, CARES, MindSpark, OpenDoor" },
+        { "text": "Optimized Search API using batch processing, parallel hydration & parallel processing", "impact": "P99 latency 10–15s → 3–4s (~70% faster)" },
+        { "text": "Eliminated N+1 queries, composite indexing, PostgreSQL recursive CTEs for nested hierarchies", "impact": "Significant query performance improvement" },
+        { "text": "Built PDF Microservice for exam paper generation and student performance reports", "impact": "Automated document delivery across products" },
+        { "text": "Integrated AI-powered content generation using student performance data via LLM", "impact": "Personalized content at scale" },
+        { "text": "Built reusable Angular UI components for CAP", "impact": "30% reduction in UI development time" },
+        { "text": "Led design & code reviews for 20+ features, mentored team on microservices best practices", "impact": "25% faster delivery • 40% fewer production bugs" }
       ],
-      "tech": ["Node.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Angular"]
+      "tech": ["Node.js", "TypeScript", "PostgreSQL", "Angular", "Redis", "AWS", "Docker", "Kafka"]
     },
     {
       "role": "Software Engineering Intern",
@@ -143,9 +146,9 @@
     "codeCard": {
       "experience": {
         "years": 2,
-        "focus": ["Distributed Systems", "Microservices", "Data Engineering"]
+        "focus": ["Distributed Systems", "Microservices", "System Design", "Performance Optimization"]
       },
-      "currentlyBuilding": "Scalable multi-tenant platforms"
+      "currentlyBuilding": "Unified microservices-based content platform (CAP)"
     }
   }
 }
