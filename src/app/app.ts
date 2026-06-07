@@ -1,6 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
 import { Navbar } from "./layout/navbar/navbar";
+import { ThemeService } from './core/services/theme.service';
 import { Home } from "./features/home/home";
 import { Experience } from "./features/experience/experience";
 import { Projects } from "./features/projects/projects";
@@ -17,4 +17,5 @@ import { Footer } from "./layout/footer/footer";
 })
 export class App {
   protected readonly title = signal('portfolio');
+  private readonly _theme = inject(ThemeService);
 }
