@@ -1,26 +1,44 @@
-<nav [class.scrolled]="scrolled">
-  @if(personalInfo$ | async; as info){
-  <div class="nav-container" >
+<nav [class.scrolled]="scrolled" [class.menu-open]="menuOpen">
+  @if (personalInfo$ | async; as info) {
+    <div class="nav-container">
+      <a href="#home" class="logo" (click)="closeMenu()">{{ info.website }}</a>
 
-    <div class="logo neon">{{info.website}}</div>
+      <div class="nav-panel">
+        <ul class="nav-links">
+          <li><a href="#home" (click)="closeMenu()">Home</a></li>
+          <li><a href="#experience" (click)="closeMenu()">Experience</a></li>
+          <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+          <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+        </ul>
 
-    <div class="right">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        @if (info.resumeUrl) {
+          <a [href]="info.resumeUrl" target="_blank" rel="noopener" class="resume-btn" (click)="closeMenu()">
+            Resume
+          </a>
+        }
+      </div>
 
-      @if(info.resumeUrl){
-      <a [href]="info.resumeUrl" target="_blank" class="resume-btn" >
-      Resume
-      </a>
-      }
+      <div class="nav-actions">
+        <button
+          type="button"
+          class="icon-btn theme-toggle"
+          (click)="toggleTheme()"
+          [attr.aria-label]="themeService.theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <i [class]="themeService.theme() === 'dark' ? 'pi pi-sun' : 'pi pi-moon'"></i>
+        </button>
+
+        <button
+          type="button"
+          class="icon-btn menu-toggle"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="menuOpen"
+          aria-label="Toggle navigation menu"
+        >
+          <i [class]="menuOpen ? 'pi pi-times' : 'pi pi-bars'"></i>
+        </button>
+      </div>
     </div>
-
-  </div>
-}
-
+  }
 </nav>
