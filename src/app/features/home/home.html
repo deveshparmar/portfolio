@@ -74,10 +74,8 @@
   experience: {{ '{' }}
     years: <span class="number">{{h.codeCard.experience.years}}</span>,
     focus: [
-@for (f of h.codeCard.experience.focus; track $index) {
-      <span class="string">'{{f}}'</span>@if (!$last) {,}
-}
-    ]
+@for(f of h.codeCard.experience.focus; track $index){      <span class="string">'{{f}}'</span>{{ !$last ? ',' : '' }}
+}    ]
   {{ '}' }},
   currentlyBuilding:
     <span class="string">'{{h.codeCard.currentlyBuilding}}'</span>
