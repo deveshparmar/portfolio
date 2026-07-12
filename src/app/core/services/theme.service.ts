@@ -11,8 +11,7 @@ export class ThemeService {
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
       const stored = localStorage.getItem('theme') as Theme | null;
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.applyTheme(stored ?? (prefersDark ? 'dark' : 'light'));
+      this.applyTheme(stored === 'light' ? 'light' : 'dark');
     }
   }
 

@@ -5,22 +5,40 @@
   <div class="grid">
 
     @for(p of projects$ | async;  track $index){
-    <div class="card">
+    <article class="card">
 
       <!-- HEADER -->
       <div class="top">
-        <div class="{{p.icon}}"></div>
-        <span class="duration">{{p.duration}}</span>
+        <div class="{{p.icon}}" aria-hidden="true"></div>
+        <div class="top-actions">
+          @if (p.githubUrl) {
+            <a [href]="p.githubUrl" target="_blank" rel="noopener noreferrer" class="link-btn" aria-label="View {{p.title}} on GitHub">
+              <i class="pi pi-github"></i>
+            </a>
+          }
+          @if (p.liveUrl) {
+            <a [href]="p.liveUrl" target="_blank" rel="noopener noreferrer" class="link-btn" aria-label="Open live demo for {{p.title}}">
+              <i class="pi pi-external-link"></i>
+            </a>
+          }
+          <span class="duration">{{p.duration}}</span>
+        </div>
       </div>
 
-      <h3>{{p.title}}</h3>
+      <h3>
+        @if (p.githubUrl || p.liveUrl) {
+          <a [href]="p.liveUrl || p.githubUrl" target="_blank" rel="noopener noreferrer" class="title-link">{{p.title}}</a>
+        } @else {
+          {{p.title}}
+        }
+      </h3>
 
       <p class="desc">{{p.desc}}</p>
 
       <!-- HIGHLIGHTS -->
       <ul>
         @for(h of p.highlights; track $index){
-          <li>▹ {{h}}</li>
+          <li>{{h}}</li>
         }
       </ul>
 
@@ -31,7 +49,7 @@
         }
       </div>
 
-    </div>
+    </article>
   }
 
   </div>

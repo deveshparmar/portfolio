@@ -1,12 +1,30 @@
+.contact {
+  text-align: center;
+}
+
+.contact .section-title {
+  text-align: center;
+}
+
 .desc {
   color: var(--text-secondary);
   max-width: 36rem;
+  margin-inline: auto;
   margin-bottom: var(--space-10);
   line-height: 1.7;
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .form-card {
+  width: 100%;
   max-width: 36rem;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
@@ -14,6 +32,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
+  text-align: left;
   transition:
     border-color var(--transition),
     box-shadow var(--transition),
@@ -28,6 +47,7 @@
   h3 {
     font-size: 1.0625rem;
     margin-bottom: var(--space-2);
+    text-align: center;
   }
 }
 
@@ -60,13 +80,13 @@ textarea {
 }
 
 button {
-  align-self: flex-start;
+  align-self: stretch;
   margin-top: var(--space-2);
   padding: var(--space-3) var(--space-8);
   border-radius: var(--radius-md);
   border: none;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-contrast);
   font-family: inherit;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -90,11 +110,6 @@ button {
 
 @media (max-width: 480px) {
   .form-card {
-    padding: var(--space-6);
-  }
-
-  button {
-    width: 100%;
-    text-align: center;
+    padding: var(--space-5);
   }
 }

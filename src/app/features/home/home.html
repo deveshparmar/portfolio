@@ -12,51 +12,53 @@
 
     <h2>{{h.role}}</h2>
 
+    @if (h.desc) {
     <p class="desc">
       {{h.desc}}
     </p>
+    }
 
     <!-- ICONS -->
     <div class="icons">
       @if(h.socials.email){
-      <a [href]="'mailto:' + h.socials.email" class="icon" >
+      <a [href]="'mailto:' + h.socials.email" class="icon" aria-label="Email">
         <i class="pi pi-envelope"></i>
       </a>
       }
 
     @if(h.socials.linkedin){
-      <a [href]="h.socials.linkedin" target="_blank" class="icon" >
+      <a [href]="h.socials.linkedin" target="_blank" rel="noopener noreferrer" class="icon" aria-label="LinkedIn">
         <i class="pi pi-linkedin"></i>
       </a>
     }
 
     @if(h.socials.twitter){
-      <a [href]="h.socials.twitter" target="_blank" class="icon" >
+      <a [href]="h.socials.twitter" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Twitter">
         <i class="pi pi-twitter"></i>
       </a>
     }
 
     @if(h.socials.github){
-      <a [href]="h.socials.github" target="_blank" class="icon" >
+      <a [href]="h.socials.github" target="_blank" rel="noopener noreferrer" class="icon" aria-label="GitHub">
         <i class="pi pi-github"></i>
       </a>
     }
 
     @if(h.socials.leetcode){
-      <a [href]="h.socials.leetcode" target="_blank" class="icon" >
-        <i class="pi pi-code"></i>
+      <a [href]="h.socials.leetcode" target="_blank" rel="noopener noreferrer" class="icon icon-leetcode" aria-label="LeetCode">
+        <img src="icons/leetcode.png" alt="" width="18" height="18" />
       </a>
     }
 
     @if(h.socials.blog){
-      <a [href]="h.socials.blog" target="_blank" class="icon" >
+      <a [href]="h.socials.blog" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Blog">
         <i class="pi pi-objects-column"></i>
       </a>
     }
     </div>
   </div>
 
-  <!-- RIGHT (CODE CARD) -->
+  <!-- RIGHT (TERMINAL / CODE CARD) -->
   <div class="right">
     <div class="code-card">
       <div class="header">
@@ -66,25 +68,19 @@
         <span class="file">developer.ts</span>
       </div>
 
-      <pre>
-<span class="key">const</span> developer = {{ '{' }}
+      <pre class="code-body"><span class="key">const</span> developer = {{ '{' }}
   name: <span class="string">'{{h.name}} {{h.surname}}'</span>,
   role: <span class="string">'{{h.role}}'</span>,
-
   experience: {{ '{' }}
     years: <span class="number">{{h.codeCard.experience.years}}</span>,
     focus: [
-      @for(f of h.codeCard.experience.focus; track $index){<span class="string">'{{f}}'</span>{{ !$last ? ', ' : '' }}}
-    ]
+@for(f of h.codeCard.experience.focus; track $index){      <span class="string">'{{f}}'</span>{{ !$last ? ',' : '' }}
+}    ]
   {{ '}' }},
-
-  currentlyBuilding: <span class="string">'{{h.codeCard.currentlyBuilding}}'</span>
-{{ '}' }};
-      </pre>
+  currentlyBuilding:
+    <span class="string">'{{h.codeCard.currentlyBuilding}}'</span>
+{{ '}' }};</pre>
     </div>
-
-    <!-- <div class="badge top"></div>
-    <div class="badge bottom"></div> -->
   </div>
 
 </section>
