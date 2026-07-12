@@ -7,7 +7,7 @@
 
 .focus-card {
   padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   background: var(--accent-subtle);
   border: 1px solid var(--accent-muted);
   color: var(--accent);
@@ -82,7 +82,7 @@
     padding: var(--space-1) var(--space-3);
     font-size: 0.75rem;
     font-weight: 500;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-md);
     background: var(--bg-subtle);
     color: var(--text-secondary);
     border: 1px solid var(--border);
@@ -171,8 +171,23 @@
   }
 }
 
+@media (max-width: 768px) {
+  .card,
+  .cert-card {
+    padding: var(--space-5);
+  }
+
+  .certs {
+    margin-top: var(--space-12);
+  }
+}
+
 @media (max-width: 480px) {
   .focus-row {
     gap: var(--space-2);
+  }
+
+  .focus-card {
+    font-size: 0.75rem;
   }
 }

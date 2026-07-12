@@ -17,7 +17,7 @@
   "about": {
     "description": [
       "I'm a Software Engineer with 2+ years of experience building scalable, distributed microservices in edtech. My work is driven by a passion for system design, performance optimization, and solving complex architectural challenges.",
-      "At Educational Initiatives, I led the migration from fragmented per-product monolithic content systems to a unified microservices-based platform - the Common Authoring Platform (CAP) - now serving 4 products and 50K+ content items. I own the Core Content Microservice end-to-end, from design to delivery.",
+      "At Educational Initiatives, I led the migration from fragmented per-product monolithic content systems to a unified cloud-native AWS microservices platform, the Common Authoring Platform (CAP), now serving 4 products and 100K+ content items. I own the Core Content Microservice end-to-end, from design to delivery.",
       "I graduated from Pandit Deendayal Energy University with a CGPA of 9.80. Beyond coding, I've led technical communities and published research in NLP."
     ],
     "tech": [
@@ -36,7 +36,7 @@
     ],
     "leadership": {
       "role": "Vice President, GFG Student Chapter",
-      "duration": "Jun 2022 – Jul 2023",
+      "duration": "Jun 2022 - Jul 2023",
       "desc": "Led 10+ coding contests with 300+ participants"
     },
     "publication": {
@@ -48,31 +48,68 @@
     {
       "role": "Software Development Engineer",
       "company": "Educational Initiatives",
-      "duration": "Jan 2024 – Present",
+      "duration": "Jan 2024 - Present",
       "location": "Ahmedabad",
       "isCurrent": true,
       "highlights": [
-        { "text": "Led migration from per-product monolithic content systems to unified microservices architecture", "impact": "4 products • 50K+ content items" },
-        { "text": "Designed and owned Core Content Microservice — full content lifecycle, container assembly, adaptive learning logic", "impact": "CAP serving ASSET, CARES, MindSpark, OpenDoor" },
-        { "text": "Optimized Search API using batch processing, parallel hydration & parallel processing", "impact": "P99 latency 10–15s → 3–4s (~70% faster)" },
-        { "text": "Eliminated N+1 queries, composite indexing, PostgreSQL recursive CTEs for nested hierarchies", "impact": "Significant query performance improvement" },
-        { "text": "Built PDF Microservice for exam paper generation and student performance reports", "impact": "Automated document delivery across products" },
-        { "text": "Integrated AI-powered content generation using student performance data via LLM", "impact": "Personalized content at scale" },
-        { "text": "Built reusable Angular UI components for CAP", "impact": "30% reduction in UI development time" },
-        { "text": "Led design & code reviews for 20+ features, mentored team on microservices best practices", "impact": "25% faster delivery • 40% fewer production bugs" }
+        {
+          "text": "Led migration from monolithic, per-product content management to a unified cloud-native AWS microservices platform by architecting the Core Content Microservice using reusable, extensible SOLID-based content containers.",
+          "impact": "10+ service ecosystem · 100K+ content items · 4 products"
+        },
+        {
+          "text": "Designed and owned Core Content Microservice: full content lifecycle, container assembly, adaptive learning logic",
+          "impact": "CAP serving ASSET, CARES, MindSpark, OpenDoor"
+        },
+        {
+          "text": "Optimized Search API performance via batch processing, parallel hydration, composite indexing, N+1 query elimination, and recursive PostgreSQL CTEs.",
+          "impact": "P99 latency 10-15s → 800-900ms (94% improvement)"
+        },
+        {
+          "text": "Reduced PostgreSQL load using Redis Cluster caching with cache-aside and write-through strategies and configurable TTL, maintaining backward-compatible REST APIs.",
+          "impact": "20-30% lower DB load · zero breaking changes"
+        },
+        {
+          "text": "Designed a bitwise authorization module for CAP, encoding permissions across roles, orgs, and users into a versioned hex bit mask with constant-time access checks while eliminating cross-service auth inconsistencies.",
+          "impact": "50+ permissions · 20x smaller permission payloads"
+        },
+        {
+          "text": "Developed reusable Angular 21 UI components for the internal authoring platform, contributing to a shared component library reused across product teams.",
+          "impact": "30% reduction in UI development time"
+        },
+        {
+          "text": "Engineered a configurable, Jira-inspired content review engine with reusable workflow transitions, conditional validations, and automated actions, replacing hardcoded review rules with per-content-type workflows.",
+          "impact": "Rollout across 4 products"
+        },
+        {
+          "text": "Built an LLM-driven planning pipeline integrated with EI-MCP Gateway to transform technical specs into structured implementation plans, grounded in architecture and coding-standard rule files.",
+          "impact": "Spec-to-plan automation · architecture-grounded outputs"
+        },
+        {
+          "text": "Led design & code reviews for 20+ features; mentored team on microservices best practices",
+          "impact": "25% faster delivery · 40% fewer production bugs"
+        }
       ],
       "tech": ["Node.js", "TypeScript", "PostgreSQL", "Angular", "Redis", "AWS", "Docker", "Kafka"]
     },
     {
       "role": "Software Engineering Intern",
       "company": "Capgemini",
-      "duration": "Jun 2023 – Jul 2023",
+      "duration": "Jun 2023 - Oct 2023",
       "location": "Gandhinagar",
       "isCurrent": false,
       "highlights": [
-        { "text": "Built healthcare workflow solution using ABHA sandbox" },
-        { "text": "Developed LIMS modules with digital health records" },
-        { "text": "Designed REST APIs for interoperability" }
+        {
+          "text": "Designed a proof-of-concept on India's ABHA Sandbox to digitize hospital workflows across patient registration, records management, and consent verification.",
+          "impact": "3 modules · validated against 200+ simulated records"
+        },
+        {
+          "text": "Delivered LIMS modules integrated with the national health ecosystem, enabling digital health records, ABHA card generation, secure medical document storage, and consent-based verification.",
+          "impact": "2 modules · reduced dependency on physical reports"
+        },
+        {
+          "text": "Engineered and tested RESTful APIs for seamless data exchange and interoperability across digital healthcare systems, ensuring compliance with healthcare standards.",
+          "impact": "10+ APIs · standards-compliant interoperability"
+        }
       ],
       "tech": ["MongoDB", "Express", "React", "Node.js", "REST APIs"]
     }
@@ -104,36 +141,53 @@
   },
   "projects": [
     {
+      "title": "CodeSage - AI PR Reviewer",
+      "icon": "pi pi-github",
+      "duration": "Mar-Jul 2026",
+      "desc": "AI PR review platform with event-driven RAG and GitHub integrations.",
+      "highlights": [
+        "10+ secure REST APIs + HMAC webhooks",
+        "Provider-agnostic SCM (Strategy/Adapter)",
+        "Kafka RAG with pgvector + GPT-4.1",
+        "Docker Compose + GitHub Actions CI"
+      ],
+      "tech": ["Spring Boot", "Kafka", "PostgreSQL", "Redis"],
+      "githubUrl": "https://github.com/deveshparmar/codesage"
+    },
+    {
       "title": "Distributed Job Processing System",
       "icon": "pi pi-cog",
-      "duration": "Feb–Mar 2026",
+      "duration": "Feb-Mar 2026",
       "desc": "Fault-tolerant distributed job scheduler with Kafka and retry mechanisms.",
       "highlights": ["At-least-once delivery", "DLQ + retry system", "Idempotent processing", "100+ concurrent jobs tested"],
-      "tech": ["Node.js", "Kafka", "PostgreSQL", "Redis"]
+      "tech": ["Node.js", "Kafka", "PostgreSQL", "Redis"],
+      "githubUrl": "https://github.com/deveshparmar/job-api"
     },
     {
       "title": "Digital Watermarking using QR",
       "icon": "pi pi-lock",
-      "duration": "Aug–Nov 2023",
+      "duration": "Aug-Nov 2023",
       "desc": "Secure image watermarking using QR embedding with encryption.",
       "highlights": ["LSB, DCT, DWT algorithms", "RSA & AES encryption", "QR-based embedding"],
-      "tech": ["Python", "Image Processing", "Security"]
+      "tech": ["Python", "Image Processing", "Security"],
+      "githubUrl": "https://github.com/deveshparmar/Digital-Watermarking-Using-QR-code"
     },
     {
       "title": "Drug Quality Classification",
       "icon": "pi pi-chart-scatter",
-      "duration": "Nov–Dec 2022",
+      "duration": "Nov-Dec 2022",
       "desc": "NLP-based system for predicting drug quality using sentiment analysis.",
       "highlights": ["NLP sentiment analysis", "Multiple ML models", "Published at IEEE WCONF 2023"],
-      "tech": ["Python", "NLP", "Machine Learning", "Streamlit"]
+      "tech": ["Python", "NLP", "Machine Learning", "Streamlit"],
+      "githubUrl": "https://github.com/deveshparmar/Drug-Quality-Prediction-NLP"
     }
   ],
   "home": {
     "intro": "// Hello, I'm",
     "name": "Devesh",
     "surname": "Parmar",
-    "role": "Software Engineer & Systems Architect",
-    "desc": "Building scalable, data-intensive microservices with Node.js, Spring Boot, PostgreSQL, and Redis.",
+    "role": "SDE @ Ei | Building across Tech · Finance · AI · System Design",
+    "desc": "",
     "socials": {
       "email": "deveshparmar2003@gmail.com",
       "phone": "+918511280104",
@@ -148,7 +202,7 @@
         "years": 2,
         "focus": ["Distributed Systems", "Microservices", "System Design"]
       },
-      "currentlyBuilding": "Unified microservices-based content platform (CAP)"
+      "currentlyBuilding": "CAP unified content microservices"
     }
   }
 }

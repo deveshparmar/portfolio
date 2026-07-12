@@ -61,6 +61,8 @@ export interface PortfolioData {
     desc: string;
     highlights: string[];
     tech: string[];
+    githubUrl?: string;
+    liveUrl?: string;
   }>;
   home: {
     intro: string;

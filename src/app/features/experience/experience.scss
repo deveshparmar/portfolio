@@ -86,7 +86,7 @@
 .badge {
   flex-shrink: 0;
   padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   font-size: 0.75rem;
   font-weight: 500;
   background: var(--accent-subtle);
@@ -134,24 +134,42 @@ li {
     padding: var(--space-1) var(--space-3);
     font-size: 0.75rem;
     font-weight: 500;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-md);
     background: var(--accent-subtle);
     color: var(--accent);
     border: 1px solid var(--accent-muted);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .timeline {
-    --timeline-gutter: 2rem;
+    --timeline-gutter: 1.75rem;
   }
 
-  .dot {
-    top: 1.5rem;
+  .card {
+    padding: var(--space-5);
   }
 
   .header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  li {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    --timeline-gutter: 1.5rem;
+  }
+
+  .dot {
+    top: 1.35rem;
+  }
+
+  .chips span {
+    font-size: 0.7rem;
   }
 }

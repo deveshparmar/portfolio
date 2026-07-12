@@ -122,6 +122,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-4);
+  }
+}
+
 @media (max-width: 480px) {
   .tech-list {
     grid-template-columns: 1fr;
@@ -129,5 +135,9 @@
 
   .grid-2 {
     grid-template-columns: 1fr;
+  }
+
+  .left p {
+    font-size: 0.9375rem;
   }
 }
